@@ -1,0 +1,27 @@
+ body {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        img {
+            display: block;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+div{
+    color: #00c9c0;
+    font-size: x-large;
+}
