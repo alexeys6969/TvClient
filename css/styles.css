@@ -10,6 +10,7 @@ body {
 .header {
     display: flex;
     margin-bottom: 24px;
+    height: 10%;
 }
 
 .gradient {
@@ -53,4 +54,52 @@ body {
     padding: 8px 12px;
     border-radius: 12px;
     margin-bottom: 8px;
+}
+
+
+/*заголовки*/
+.parking-title, .news-title, .pogoda-title, .kv-title,  .max-title, .info-title{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/*погода*/
+.white-stripe {
+    height: 1px;
+    width: auto;
+    background-color: #FFFFFF;
+}
+
+.gradus, .pogoda-opisanie {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/*квартира*/
+.kv-img img{
+    width: 35%;
+    height: 25%;
+    border-radius: 20px;
+}
+
+/*max*/
+.max-qr {
+    display: flex;
+    justify-content: center;
+}
+.max-qr img {
+    width: 20%;
+    height: 10%;
+}
+.max-text {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+/*inf0*/
+.rulesHeader, .infoMusorHeader, .info-telefon p {
+    font-size: 20px;
+    font-weight: 500;
 }
