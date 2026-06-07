@@ -1,0 +1,22 @@
+1. Скачать все zip файлы
+2. Распаковать все zip файл
+3. Открыть авалонию с помощью VisulStudio, 2026
+4. Открыть tvclient в Visual Studio Code
+5. Установить .NET 10.0
+6. Запустить файл формата .exe в корневом пути каталога
+7. Запустить tvclient в Visual Studio Code
+
+tvclient
+    css папка
+    js папка
+    html страницы
+
+UjinTemplate.Desktop
+    Assets - ресурсы
+    Services - сервисы
+    ViewModel - модели представления
+    View - представления
+UjinTemplate.Browser
+    
+
+
