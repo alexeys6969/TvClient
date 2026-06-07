@@ -9,5 +9,61 @@
 <body>
     <img src="img/cat.png">
     <div>Ожидание...</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script>
+    const hubConnection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:7271/screenAuthentificate")
+        .build();
+
+    hubConnection.on("screenAuthentificate", function (screen) {
+        console.log("SignalR update:", screen);
+
+        if (screen.isApproved) {
+            localStorage.setItem("isBlocked", "false");
+            localStorage.setItem("deviceCode", screen.deviceCode);
+            localStorage.setItem("buildingId", screen.buildingId);
+            localStorage.setItem("templateId", screen.templateId);
+            console.log("dfdfd");
+            window.location.href = 'http://127.0.0.1:5500/index.html';
+
+        }
+    });
+
+    async function start() {
+        try {
+            await hubConnection.start()
+            console.log("SignalR connected")
+
+            let isBlocked = localStorage.getItem("isBlocked")
+            let id = localStorage.getItem("id")
+
+            if (isBlocked === null) {
+                isBlocked = "true"
+                id = crypto.randomUUID()
+
+                localStorage.setItem("isBlocked", isBlocked)
+                localStorage.setItem("id", id)
+
+                const response = await fetch("https://localhost:7271/Sreens/create", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(id)
+                });
+
+                if (response.status === 200) {
+                    console.log("двестиии")
+                } else {
+                    console.log("не двестии")
+                }
+            }
+        } catch (err) {
+            console.error("SignalR error:", err)
+        }
+    }
+
+    start()
+</script>
 </body>
 </html>
