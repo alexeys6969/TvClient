@@ -43,53 +43,21 @@
     <div class="row">
         <div class="block small-middle">
             <div class="pogoda">            
-                <div class="pogoda-title">Погода</div>
-                <div class="gradus">+18°</div>      
-                <div class="pogoda-opisanie">Солнечно</div>
-                
-                <div class="pogoda-item">
-                    <div class="pogoda-bottom-row">
-                        <div class="day">вт</div>
-                        <div class="weather-temp-area">
-                            <div class="pogoda-icon"></div>
-                            <div class="gradus-item">18°</div>
-                        </div>
+                <div class="pogoda-title">Погода в Перми</div>
+                <div class="center-gradus" id="weatherTemp">--°</div>      
+                <div class="opisanie-center" id="weatherCondition">Загрузка</div>       
+                <div class="weather-bottom-row">
+                    <div class="weekday" id="weatherWeekday">--</div>
+                    <div class="weather-temp-area">
+                        <div class="small-gradus" id="weatherTempSmall">--°</div>
                     </div>
-                    <div class="white-stripe"></div>
+                    <div class="weekday" id="weatherWeekdaySec">--</div>
+                    <div class="weather-temp-area-sec">
+                        <div class="small-gradus" id="weatherTempSmallSec">--°</div>
+                    </div>
                 </div>
                 
-                <div class="pogoda-item">
-                    <div class="pogoda-bottom-row">
-                        <div class="day">ср</div>
-                        <div class="pogoda-temp-area">
-                            <div class="pogoda-icon"></div>
-                            <div class="gradus-item">16°</div>
-                        </div>
-                    </div>
-                    <div class="white-stripe"></div>
-                </div>
-                
-                <div class="pogoda-item">
-                    <div class="pogoda-bottom-row">
-                        <div class="day">чт</div>
-                        <div class="pogoda-temp-area">
-                            <div class="pogoda-icon"></div>
-                            <div class="gradus-item">14°</div>
-                        </div>
-                    </div>
-                    <div class="white-stripe"></div>
-                </div>
-                
-                <div class="pogoda-item">
-                    <div class="pogoda-bottom-row">
-                        <div class="day">пт</div>
-                        <div class="pogoda-temp-area">
-                            <div class="pogoda-icon"></div>
-                            <div class="gradus-item">20°</div>
-                        </div>
-                    </div>
-                    <div class="white-stripe"></div>
-                </div>
+                <div class="white-stripe"></div>
             </div>
         </div>
         <div class="block big-middle">
@@ -143,5 +111,7 @@
         </div>
     </div>
 </div>
+<script src="/js/pogoda.js"></script>
 </body>
+
 </html>

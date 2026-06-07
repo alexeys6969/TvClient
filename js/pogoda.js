@@ -25,12 +25,15 @@
     
     const tempElement = document.getElementById('weatherTemp');
     const tempSmallElement = document.getElementById('weatherTempSmall');
+    const tempSmallElementSec = document.getElementById('weatherTempSmallSec');
     const conditionElement = document.getElementById('weatherCondition');
     const weekdayElement = document.getElementById('weatherWeekday');
+    const weekdayElementSec = document.getElementById('weatherWeekdaySec');
     
     function updateWeekday() {
         const today = new Date();
         weekdayElement.textContent = weekdays[today.getDay()];
+        weekdayElementSec.textContent = weekdays[today.getDay() + 1]
     }
     async function loadWeather() {
         try {
@@ -57,6 +60,7 @@
             
             tempElement.textContent = tempText;
             tempSmallElement.textContent = tempText;
+            tempSmallElementSec.textContent = tempText;
             conditionElement.textContent = conditionText;
             updateWeekday();
             

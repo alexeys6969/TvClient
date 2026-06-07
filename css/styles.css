@@ -71,7 +71,7 @@ body {
     background-color: #FFFFFF;
 }
 
-.gradus, .pogoda-opisanie {
+.center-gradus, .opisanie-center {
     font-size: 22px;
     font-weight: 700;
 }
@@ -91,6 +91,7 @@ body {
 .max-qr img {
     width: 20%;
     height: 10%;
+    border-radius: 15px;
 }
 .max-text {
     font-size: 18px;
